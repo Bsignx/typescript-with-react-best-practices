@@ -43,6 +43,7 @@ export const MutableRef = () => {
 };
 
 // example of use
+
 export const UseRefExample = () => (
   <>
     <DomRef />

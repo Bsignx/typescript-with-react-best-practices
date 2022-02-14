@@ -1,21 +1,5 @@
 import { ChangeEvent, MouseEvent, PropsWithChildren } from "react";
 
-export const EventPropsExample = () => {
-  const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
-    alert(`${event.type} on ${event.currentTarget.tagName}`);
-  };
-
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    alert(`${event.type} on ${event.currentTarget.tagName}`);
-  };
-  return (
-    <>
-      <Button onClick={handleClick}>Event Props</Button>
-      <Input onChange={handleChange} />
-    </>
-  );
-};
-
 // button example
 
 type ButtonProps = {
@@ -35,3 +19,21 @@ type InputProps = {
 const Input = ({ onChange }: PropsWithChildren<InputProps>) => (
   <input type="text" onChange={onChange} />
 );
+
+// example of use
+
+export const EventPropsExample = () => {
+  const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
+    alert(`${event.type} on ${event.currentTarget.tagName}`);
+  };
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    alert(`${event.type} on ${event.currentTarget.tagName}`);
+  };
+  return (
+    <>
+      <Button onClick={handleClick}>Event Props</Button>
+      <Input onChange={handleChange} />
+    </>
+  );
+};
